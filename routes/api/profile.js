@@ -5,13 +5,14 @@ const Profile  = require('../../models/Profile')
 const User = require('../../models/User')
 const { check, validationResult } = require('express-validator');
 
-const getProfile = require('./profile-me_GET.controller')
+const getProfile_me = require('./profile_GET-me.controller')
+const getProfile_all = require('./profile_GET-allprofiles')
 const postProfile = require('./profile_Post.controller')
 
 //@route Get    /api/profile/me
 //@desc         Test Route
 //@access       Private
-router.get('/me',auth, (req,res,next) =>{getProfile.getProfile(req,res,next)})
+router.get('/me',auth, (req,res,next) =>{getProfile_me.getProfile_me(req,res,next)})
 
 router.post('/', [auth , 
     [
@@ -25,15 +26,7 @@ router.post('/', [auth ,
 // @route    GET api/profile
 // @desc     Get all profiles
 // @access   Public
-router.get('/', async (req, res) => {
-    try {
-      const profiles = await Profile.find().populate('user', ['name', 'avatar']);
-      res.json(profiles);
-    } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server Error');
-    }
-  });
+router.get('/', ()=>getProfile_all.getAllProfiles(req,res,next));
 
 // @route    GET api/profile/user/:user_id
 // @desc     Get profile by user ID
