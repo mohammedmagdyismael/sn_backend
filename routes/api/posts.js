@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const getPosts = require('./posts_GET.controller')
+const getPosts = require('./Posts_Controller/posts_GET.controller')
 
 
 //@route Get    /api/users

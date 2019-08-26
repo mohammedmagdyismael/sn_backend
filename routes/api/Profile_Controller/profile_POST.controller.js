@@ -1,4 +1,4 @@
-const Profile  = require('../../models/Profile')
+const Profile  = require('../../../models/Profile')
 const {validationResult } = require('express-validator');
 
 exports.postProfile = async (req, res, next) =>{

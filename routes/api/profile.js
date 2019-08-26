@@ -3,23 +3,23 @@ const router = express.Router()
 const auth = require('../../middleware/auth')
 const { check } = require('express-validator');
 
-const getProfile_me = require('./profile_GET-me.controller')
-const getProfile_all = require('./profile_GET-allprofiles.controller')
-const getProfile_user = require('./profile_GET-user.controller')
-const getProfile_githubrepos = require('./profile_GET-githubrepos.controller')
-const postProfile = require('./profile_POST.controller')
-const putProfile_experience = require('./profile_PUT-experience.controller')
-const deleteProfile_experience = require('./profile_DELETE-experience.controller')
-const deleteProfile = require('./profile_DELETE.controller')
-const putEducation = require('./profile_PUT-education.controller')
-const deleteEducation = require('./profile_DELETE-education.controller')
-
+const getProfile_me = require('./Profile_Controller/profile_GET-me.controller')
+const getProfile_all = require('./Profile_Controller/profile_GET-allprofiles.controller')
+const getProfile_user = require('./Profile_Controller/profile_GET-user.controller')
+const getProfile_githubrepos = require('./Profile_Controller/profile_GET-githubrepos.controller')
+const postProfile = require('./Profile_Controller/profile_POST.controller')
+const putProfile_experience = require('./Profile_Controller/profile_PUT-experience.controller')
+const deleteProfile_experience = require('./Profile_Controller/profile_DELETE-experience.controller')
+const deleteProfile = require('./Profile_Controller/profile_DELETE.controller')
+const putEducation = require('./Profile_Controller/profile_PUT-education.controller')
+const deleteEducation = require('./Profile_Controller/profile_DELETE-education.controller')
 
 
 //@route Get    /api/profile/me
 //@desc         Test Route
 //@access       Private
 router.get('/me',auth, (req,res,next) =>{getProfile_me.getProfile_me(req,res,next)})
+
 
 router.post('/', [auth , 
     [

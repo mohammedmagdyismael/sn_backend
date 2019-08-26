@@ -2,6 +2,7 @@
 
 exports.getGithubRep = (req, res, next) => {
     try {
+        
       const options = {
         uri: `https://api.github.com/users/${
           req.params.username

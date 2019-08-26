@@ -1,4 +1,4 @@
-const Profile  = require('../../models/Profile')
+const Profile  = require('../../../models/Profile')
 
 exports.deleteExperience = async (req, res, next) => {
     try {

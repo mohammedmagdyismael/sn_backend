@@ -1,26 +1,26 @@
-const Profile  = require('../../models/Profile')
+const Profile  = require('../../../models/Profile')
 const { validationResult } = require('express-validator');
 
-exports.putEducation = async (req, res,next) => {
+exports.putExperience = async (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
 
     const {
-      school,
-      degree,
-      fieldofstudy,
+      title,
+      company,
+      location,
       from,
       to,
       current,
       description
     } = req.body;
 
-    const newEdu = {
-      school,
-      degree,
-      fieldofstudy,
+    const newExp = {
+      title,
+      company,
+      location,
       from,
       to,
       current,
@@ -30,7 +30,7 @@ exports.putEducation = async (req, res,next) => {
     try {
       const profile = await Profile.findOne({ user: req.user.id });
 
-      profile.education.unshift(newEdu);
+      profile.experience.unshift(newExp);
 
       await profile.save();
 

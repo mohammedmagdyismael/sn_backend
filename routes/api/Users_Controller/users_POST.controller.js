@@ -1,5 +1,5 @@
 const config = require('config')
-const User = require('../../models/User')
+const User = require('../../../models/User')
 const gravatar = require('gravatar')
 const bcryptjs = require('bcryptjs')
 const JWT = require('jsonwebtoken')
