@@ -14,14 +14,34 @@ const deleteProfile = require('./Profile_Controller/profile_DELETE.controller')
 const putEducation = require('./Profile_Controller/profile_PUT-education.controller')
 const deleteEducation = require('./Profile_Controller/profile_DELETE-education.controller')
 
+
 //@route Get    /api/profile/me
 //@desc         Test Route
 //@access       Private
+
+/**
+ * @swagger
+ * /api/profile/me:
+ *  get:
+ *      description: Use to retreive user profile
+ *      responses:
+ *          '200':
+ *              description: successful
+ */
 router.get('/me',auth, (req,res,next) =>{getProfile_me.getProfile_me(req,res,next)})
 
 // @route    GET api/profile
 // @desc     Get all profiles
 // @access   Private
+/**
+ * @swagger
+ * /api/users:
+ *  get:
+ *      description: Use to retreive user profile
+ *      responses:
+ *          '200':
+ *              description: successful
+ */
 router.post('/', [auth , 
     [
         check('status','Status is Required').not().isEmpty(),
@@ -29,7 +49,6 @@ router.post('/', [auth ,
     ]
 ], (req,res,next)=>{postProfile.postProfile(req,res,next)}
 )
-
 // @route    GET api/profile
 // @desc     Get all profiles
 // @access   Public

@@ -3,13 +3,13 @@ const router = express.Router()
 const auth = require('../../middleware/auth') 
 const { check } = require('express-validator');
 
-const getAuth = require('./auth_GET.controller')
-const postAuth = require('./auth_POST.controller')
+const getAuth = require('./Auth_Controller/auth_GET.controller')
+const postAuth = require('./Auth_Controller/auth_POST.controller')
 
 
 //@route Get    /api/users
 //@desc         Test Route
-//@access       Public
+//@access       Private
 router.get('/',auth, (req,res,next)=>getAuth.getAuth(req,res,next) );
 
 router.post('/',[ 
