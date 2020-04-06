@@ -1,4 +1,22 @@
+/**
+* Add Firebase to your project https://firebase.google.com/docs/web/setup
+*/
 {
     "mongoURI":"mongodb+srv://mohammedmagdyismael:mmi23j92@devconnector-03tjl.mongodb.net/test?retryWrites=true&w=majority",
-    "JWTsecret":"thisIsmysecret"
+    "mongodb_local": "mongodb://localhost:27017",
+    "mongodb_local_defaultDoc": "Products",
+    "mysql_host": "52.51.139.250",
+    "mysql_user": "aT4Xz9EyV84PyfW3",
+    "mysql_password": "a44wVJzhqYq8D4ED",
+    "mysql_defaultDB": "voffers20190704", 
+    "JWTsecret":"thisIsmysecret",
+    "firebaseConfig" : {
+        "apiKey": "AIzaSyCUr-_t5Gg483tDElpsywrdvJV3UoZKeHY",
+        "authDomain": "devconnector-c92b3.firebaseapp.com",
+        "databaseURL": "https://devconnector-c92b3.firebaseio.com",
+        "projectId": "devconnector-c92b3",
+        "storageBucket": "devconnector-c92b3.appspot.com",
+        "messagingSenderId": "874289896805",
+        "appId": "1:874289896805:web:f1bb552833d47ad4"
+      }
 }

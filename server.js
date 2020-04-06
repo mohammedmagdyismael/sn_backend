@@ -4,6 +4,9 @@ const swaggerSetup = require('./config/swagger')
 var bugsnag = require('@bugsnag/js')
 var bugsnagExpress = require('@bugsnag/plugin-express')
 var bugsnagClient = bugsnag('f87536c886e1ec7a4c4c896e3ef781a2')
+const bodyParser = require('body-parser');
+const Joi = require('@hapi/joi');
+const assert = require('assert');
 
 bugsnagClient.use(bugsnagExpress)
 
@@ -15,6 +18,9 @@ connectDB();
 app.use(express.json({extended : false}))
 app.use(bugsnagmiddleware.requestHandler)
 app.use(bugsnagmiddleware.errorHandler)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true})); */
+
 //bugsnagClient.notify(new Error('Test error'))
 app.use('/api/users',require('./routes/api/users'))
 app.use('/api/profile',require('./routes/api/profile'))
