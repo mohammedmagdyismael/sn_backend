@@ -23,6 +23,18 @@ npm i
 npm start
 ```
 
+## Swagger Doc
+
+you can display swagger doc for your project at 
+```
+http://localhost:5000/api/docs/
+```
+
+to configure your API endpoint with swagger follow sample example in
+```
+/my-app/routes/api/sample_controller/get.js
+```
+
 ## Project structure
 ```
 my-app
@@ -51,20 +63,11 @@ my-app
 ```
 
 
-
-
-* express
 * Bugsnag
 * mongoose
 * config
-* mongoURI
 * GoogleAnyltics
-* Swagger
-* jsonwebtoken
-* express-validator
-* gravatar
-* bcryptjs
-* nodemon
+
 
 //pipeline
 
