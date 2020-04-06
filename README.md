@@ -58,10 +58,27 @@ my-app
 │   ├── swagger.js
 │   └── google-analytics.js
 ├── middleware
-└── models
-    └── sample_model.js
+├── models
+│   └── sample_model.js
+└── .github
+    └── workflows
+        └── nodejs.yml [CI file]
 ```
 
+## Database connections
+### SQL
+
+### NoSQL (support: mongodb)
+
+you can use mongoose to connect to mongo Atlas as a cloud db or your local mongodb server.
+
+For mongo Atlas:
+
+go to ```sn_backend/config/default.json``` and set your connection string
+
+```
+ "mongoURI": "<your_connection_string>"
+```
 
 * Bugsnag
 * mongoose
