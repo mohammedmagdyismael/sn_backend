@@ -1,7 +1,7 @@
 
 # Initial page
 
-<div style="display: inline-block;"><img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/mohammedmagdyismael/sn_backend"></div>
+<div style="display: inline-block !important;"><img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/mohammedmagdyismael/sn_backend"></div>
 <div style="display: inline-block;"><img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/mohammedmagdyismael/sn_backend/Node.js CI/master"></div>
 <div style="display: inline-block;"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mohammedmagdyismael/sn_backend"></div>
 <div style="display: inline-block;"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mohammedmagdyismael/sn_backend"></div>
